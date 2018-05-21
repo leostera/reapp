@@ -1,4 +1,8 @@
-module type Design_system = {type font_faces; type text_sizes; type colors;};
+module type Design_system = {
+  type font_faces;
+  type text_sizes;
+  type colors;
+};
 
 module Default_system: Design_system = {
   type font_faces =

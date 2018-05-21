@@ -1,4 +1,5 @@
-let render = (~domId : string, ~comp, ()) =>
+/* this should typecheck for a component */
+let render = (~domId : string, comp : ReasonReact.component) =>
   comp()
-  |> ReasonReact.element
-  |> e => ReactDOMRe.renderToElementWithId(e, domId);
+    |> ReasonReact.element
+    |> e => ReactDOMRe.renderToElementWithId(e, domId);
